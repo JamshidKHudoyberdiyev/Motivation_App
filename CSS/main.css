@@ -1,0 +1,96 @@
+
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
+  --delay: 0s;
+  animation: arrows 1s var(--delay) infinite ease-in;
+}
+
+ 
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgb(225, 225, 225);
+}
+.quote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    height: 40%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+}
+.quote__text{
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    
+}
+.quote__author{
+    font-family: 'Dancing Script', cursive;
+    color: grey;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#btn{
+    
+    padding:10px;
+    width: 40%;
+    border-radius: 10px;
+    border: 0;
+    font-size: large;
+    cursor: pointer;
+}
+#btn.active{
+    color: #fff;
+    background:blueviolet;
+}
+#btn.active:hover{
+    background-color: rgb(179, 115, 238);
+}
+
+
+/* Loasder begin */
+.loader {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    color: black;
+    transform: translateY(0);
+  }
+  50% {
+    color: #3AB493;
+    transform: translateY(20px);
+  }
+}
+.opac{
+    opacity: 0;
+    transition: all 1s;
+}
+.none{
+    display: none;
+}
+
+/*loader end*/
+
